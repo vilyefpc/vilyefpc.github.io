@@ -1,4 +1,6 @@
 ---
+import "./src/styles/global.css";
+
 export interface Props {
   title?: string;
   description?: string;
@@ -37,22 +39,7 @@ const {
     <meta property="twitter:url" content={canonicalURL} />
     <!-- <meta property="twitter:image" content={socialImageURL} /> -->
   </head>
-  <body>
+  <body class="container mx-auto">
     <slot />
   </body>
 </html>
-
-<style is:global>
-  *,
-  *::before,
-  *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  html {
-    font-family: "InterVariable", system-ui, sans-serif;
-    background: var(--zinc-900);
-  }
-</style>
