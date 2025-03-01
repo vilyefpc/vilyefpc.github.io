@@ -1,0 +1,75 @@
+<header class="my-4">
+  <nav class="flex items-center justify-between">
+    <a href="/" class="text-xl font-semibold lg:text-2xl">
+      Vilye Farmer Producer Company
+    </a>
+
+    <!-- Mobile menu toggle button -->
+    <button id="menu-toggle" class="p-2 rounded-md lg:hidden hover:bg-gray-100">
+      <!-- Mobile menu open icon -->
+      <svg
+        id="open-icon"
+        class="size-6"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        fill="none"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+      </svg>
+
+      <!-- Mobile menu close icon -->
+      <svg
+        id="close-icon"
+        class="hidden size-6"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        fill="none"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18 18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+
+    <!-- Desktop menu -->
+    <div class="hidden lg:flex gap-x-10">
+      <a href="/about" class="font-semibold text-gray-900">About</a>
+      <a href="/products" class="font-semibold text-gray-900">Products</a>
+      <a href="/services" class="font-semibold text-gray-900">Services</a>
+      <a href="/contact" class="font-semibold text-gray-900">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="flex flex-col hidden py-2 space-y-1 lg:hidden">
+    <a href="/about" class="block px-3 py-2 text-gray-700 hover:bg-gray-100">
+      About
+    </a>
+    <a href="/products" class="block px-3 py-2 text-gray-700 hover:bg-gray-100">
+      Products
+    </a>
+    <a href="/services" class="block px-3 py-2 text-gray-700 hover:bg-gray-100">
+      Services
+    </a>
+    <a href="/contact" class="block px-3 py-2 text-gray-700 hover:bg-gray-100">
+      Contact
+    </a>
+  </div>
+</header>
+
+<script is:inline>
+  document.getElementById("menu-toggle").addEventListener("click", () => {
+    const menu = document.getElementById("mobile-menu");
+    const openIcon = document.getElementById("open-icon");
+    const closeIcon = document.getElementById("close-icon");
+    const isOpen = menu.classList.toggle("hidden");
+    openIcon.classList.toggle("hidden", !isOpen);
+    closeIcon.classList.toggle("hidden", isOpen);
+  });
+</script>
