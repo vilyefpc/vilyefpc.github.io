@@ -1,6 +1,6 @@
-<header class="my-4">
+<header class="relative my-4 px-4">
   <nav class="flex items-center justify-between">
-    <a href="/" class="text-xl font-semibold lg:text-2xl">
+    <a href="/" class="text-xl font-semibold lg:text-2xl whitespace-nowrap">
       Vilye Farmer Producer Company
     </a>
 
@@ -18,7 +18,7 @@
         <path
           stroke-linecap="round"
           stroke-linejoin="round"
-          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+          d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"></path>
       </svg>
 
       <!-- Mobile menu close icon -->
@@ -47,17 +47,32 @@
   </nav>
 
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="flex flex-col hidden py-2 space-y-1 lg:hidden">
-    <a href="/about" class="block px-3 py-2 text-gray-700 hover:bg-gray-100">
+  <div
+    id="mobile-menu"
+    class="absolute left-0 top-full hidden w-full bg-white shadow-lg py-2 space-y-2 lg:hidden z-50"
+  >
+    <a
+      href="/about"
+      class="block rounded-lg mx-2 px-4 py-2 text-gray-700 hover:bg-gray-100"
+    >
       About
     </a>
-    <a href="/products" class="block px-3 py-2 text-gray-700 hover:bg-gray-100">
+    <a
+      href="/products"
+      class="block rounded-lg mx-2 px-4 py-2 text-gray-700 hover:bg-gray-100"
+    >
       Products
     </a>
-    <a href="/services" class="block px-3 py-2 text-gray-700 hover:bg-gray-100">
+    <a
+      href="/services"
+      class="block rounded-lg mx-2 px-4 py-2 text-gray-700 hover:bg-gray-100"
+    >
       Services
     </a>
-    <a href="/contact" class="block px-3 py-2 text-gray-700 hover:bg-gray-100">
+    <a
+      href="/contact"
+      class="block rounded-lg mx-2 px-4 py-2 text-gray-700 hover:bg-gray-100"
+    >
       Contact
     </a>
   </div>
@@ -69,6 +84,7 @@
     const openIcon = document.getElementById("open-icon");
     const closeIcon = document.getElementById("close-icon");
     const isOpen = menu.classList.toggle("hidden");
+
     openIcon.classList.toggle("hidden", !isOpen);
     closeIcon.classList.toggle("hidden", isOpen);
   });
