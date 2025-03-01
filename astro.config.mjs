@@ -7,7 +7,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://vilyefpc.github.io",
+  site: "https://vilyefpc.com",
   integrations: [sitemap()],
 
   vite: {
