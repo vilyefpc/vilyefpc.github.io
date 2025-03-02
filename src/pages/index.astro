@@ -1,23 +1,32 @@
 ---
 import MainLayout from "../layouts/Main.astro";
+import backgroundImage from "../assets/images/rajendra-biswal-BafVsMpoSF0-unsplash.jpg";
+import { Image } from "astro:assets";
 ---
 
+<!-- Photo by <a href="https://unsplash.com/@rpbiswal?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Rajendra Biswal</a> on <a href="https://unsplash.com/photos/yellow-round-fruits-on-tree-BafVsMpoSF0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> -->
 <MainLayout>
-  <div class="py-12 isolate lg:px-8 lg:py-16">
-    <div class="text-center">
-      <h1
-        class="text-4xl font-semibold tracking-tighter text-gray-900 lg:tracking-tight lg:text-6xl text-balance"
-      >
-        Farm-Fresh Mangoes & Premium Cashews
-      </h1>
-      <p
-        class="mt-2 font-medium text-gray-500 lg:mt-6 text-md text-pretty lg:text-lg"
-      >
-        Sustainably grown, handpicked, and delivered fresh.
-        <span class="lg:block">
-          Experience the natural taste of India's finest produce.
-        </span>
-      </p>
+  <div class="relative w-screen h-[500px] lg:h-[600px]">
+    <Image
+      src={backgroundImage}
+      alt="background image of mangoes"
+      class="absolute inset-0 w-screen h-full object-cover"
+    />
+
+    <div class="absolute inset-0 flex items-center justify-center bg-black/60">
+      <div class="text-center max-w-2xl">
+        <h1
+          class="text-4xl font-semibold tracking-tight text-gray-100 lg:text-6xl"
+        >
+          Farm-Fresh Mangoes & Premium Cashews
+        </h1>
+        <p class="mt-6 font-medium text-gray-200 text-lg">
+          Sustainably grown, handpicked, and delivered fresh.
+          <span class="lg:block">
+            Experience the natural taste of India's finest produce.
+          </span>
+        </p>
+      </div>
     </div>
   </div>
 </MainLayout>
