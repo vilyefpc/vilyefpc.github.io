@@ -1,0 +1,38 @@
+<footer class="max-w-6xl mx-auto p-4">
+  <div class="flex flex-col lg:flex-row justify-between gap-4">
+    <div>
+      <div class="text-lg font-semibold">
+        Vilye Farmer Producer Company Limited
+      </div>
+      <div>House No. 852, Jakadevi, Tarval Kharegoan Road,</div>
+      <div>Ratnagiri 415620, Maharashtra, India.</div>
+      <div>CIN: UO1611MH2025PTC440131</div>
+    </div>
+    <nav class="flex flex-row lg:flex-col justify-center gap-4 lg:gap-0">
+      <a href="/about">About</a>
+      <a href="/products">Products</a>
+      <a href="/services">Services</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+  <div class="border-t border-gray-300 my-4"></div>
+  <div
+    class="flex flex-col lg:flex-row justify-between items-center text-xs text-gray-600 font-light gap-4"
+  >
+    <div class="flex-1 lg:whitespace-nowrap text-center lg:text-left">
+      Copyright &copy; <span id="year"></span> Vilye Farmer Producer Company Limited
+    </div>
+    <div class="flex-1 space-x-2 text-center">
+      <a href="/privacy-policy">Privacy Policy</a>
+      <span class="border-l border-gray-400 h-4"></span>
+      <a href="/terms">Terms</a>
+      <span class="border-l border-gray-400 h-4"></span>
+      <a href="/sitemap">Sitemap</a>
+    </div>
+    <div class="flex-1 text-center lg:text-right">India</div>
+  </div>
+</footer>
+
+<script is:inline>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>

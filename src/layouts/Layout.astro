@@ -1,5 +1,6 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import Footer from "./partials/Footer.astro";
 import "../styles/global.css";
 
 export interface Props {
@@ -43,5 +44,6 @@ const {
   <body>
     <Navbar />
     <slot />
+    <Footer />
   </body>
 </html>
