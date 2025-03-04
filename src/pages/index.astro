@@ -1,11 +1,11 @@
 ---
-import MainLayout from "../layouts/Main.astro";
-import backgroundImage from "../assets/images/rajendra-biswal-BafVsMpoSF0-unsplash.jpg";
 import { Image } from "astro:assets";
+import backgroundImage from "../assets/images/rajendra-biswal-BafVsMpoSF0-unsplash.jpg";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <!-- Photo by <a href="https://unsplash.com/@rpbiswal?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Rajendra Biswal</a> on <a href="https://unsplash.com/photos/yellow-round-fruits-on-tree-BafVsMpoSF0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> -->
-<MainLayout>
+<Layout>
   <div class="relative w-screen h-[500px] lg:h-[600px]">
     <Image
       src={backgroundImage}
@@ -29,4 +29,4 @@ import { Image } from "astro:assets";
       </div>
     </div>
   </div>
-</MainLayout>
+</Layout>
