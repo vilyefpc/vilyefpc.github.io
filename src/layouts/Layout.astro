@@ -1,5 +1,15 @@
 ---
 import '~/styles/global.css'
+
+import type { Metadata } from '~/types'
+
+interface Props extends Metadata {}
+
+const {
+  title = 'Vilye Farmer Producer Company Ltd.',
+  description = 'Vilye Farmer Producer Company Limited (Vilye FPC) is a Farmer Producer Company founded with a simple yet powerful goal — to empower farmers through collective strength.',
+  canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
+} = Astro.props
 ---
 
 <!doctype html>
@@ -7,19 +17,27 @@ import '~/styles/global.css'
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Vilye Farmer Producer Company Limited</title>
+
+    <!-- General Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <!-- <meta property="og:image" content={socialImageURL} /> -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:url" content={canonicalURL} />
+    <!-- <meta property="twitter:image" content={socialImageURL} /> -->
   </head>
   <body>
     <slot />
   </body>
 </html>
-
-<style>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    font-family: sans-serif;
-  }
-</style>
