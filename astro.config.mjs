@@ -1,12 +1,13 @@
 // @ts-check
-import { defineConfig } from 'astro/config'
+import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from "astro/config";
 
-import tailwindcss from '@tailwindcss/vite'
-import sitemap from '@astrojs/sitemap'
-import partytown from '@astrojs/partytown'
+import sitemap from "@astrojs/sitemap";
+import partytown from "@astrojs/partytown";
 
+// https://astro.build/config
 export default defineConfig({
-  site: 'https://vilyefpc.com',
+  site: "https://vilyefpc.com",
 
   vite: {
     plugins: [tailwindcss()],
@@ -16,8 +17,8 @@ export default defineConfig({
     sitemap(),
     partytown({
       config: {
-        forward: ['dataLayer.push'],
+        forward: ["dataLayer.push"],
       },
     }),
   ],
-})
+});
